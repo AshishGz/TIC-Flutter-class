@@ -4,7 +4,11 @@ import 'package:flutter_class_TIC/widgets/IconImageWidget.dart';
 import 'package:flutter_class_TIC/widgets/asscetImagewidget.dart';
 import 'package:flutter_class_TIC/widgets/buttonWidget.dart';
 import 'package:flutter_class_TIC/widgets/containerWidget.dart';
+import 'package:flutter_class_TIC/widgets/listTileWidget.dart';
+import 'package:flutter_class_TIC/widgets/listViewWidget.dart';
 import 'package:flutter_class_TIC/widgets/networkImageWidget.dart';
+import 'package:flutter_class_TIC/widgets/rowWidget.dart';
+import 'package:flutter_class_TIC/widgets/stackWidget.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -55,34 +60,46 @@ class _FlutterClassState extends State<FlutterClass> {
     return SafeArea(
         top: true,
         child: Scaffold(
-            body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ContainerWidget(),
-              ButtonWidget(),
-              ButtonWidget(),
-              ButtonWidget(),
-              ButtonWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-              NetworkImageWidget(),
-            ],
-          ),
-        )
+            appBar: AppBar(
+              title: Text('My Flutter App'),
+              leading: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/image.png'),
+              ),
+              actions: <Widget>[
+                Icon(Icons.more_vert),
+              ],
+            ),
+            body: ListTileWidget()
+//            SingleChildScrollView(
+//          child: Column(
+//            crossAxisAlignment: CrossAxisAlignment.start,
+//            children: <Widget>[
+//              RowWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ContainerWidget(),
+//              ButtonWidget(),
+//              ButtonWidget(),
+//              ButtonWidget(),
+//              ButtonWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//              NetworkImageWidget(),
+//            ],
+//          ),
+//        )
 //            Container(
 //                child: Text.rich(
 //          TextSpan(
