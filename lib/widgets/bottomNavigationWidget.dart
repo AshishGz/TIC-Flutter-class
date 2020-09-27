@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_class_TIC/widgets/digitalClock.dart';
 import 'package:flutter_class_TIC/widgets/search.dart';
 
 class BottomNaviagtionWidhet extends StatefulWidget {
@@ -10,15 +11,12 @@ class BottomNaviagtionWidhet extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<BottomNaviagtionWidhet> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 1;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white);
   static List<Widget> _widgetOptions = <Widget>[
     Search(),
-    Text(
-      'Index 1: Search',
-      style: optionStyle,
-    ),
+    DigitalClock(),
     Text(
       'Index 2: Libary',
       style: optionStyle,
