@@ -4,6 +4,7 @@ import 'package:flutter_class_TIC/widgets/IconImageWidget.dart';
 import 'package:flutter_class_TIC/widgets/asscetImagewidget.dart';
 import 'package:flutter_class_TIC/widgets/buttonWidget.dart';
 import 'package:flutter_class_TIC/widgets/containerWidget.dart';
+import 'package:flutter_class_TIC/widgets/form/myForm.dart';
 import 'package:flutter_class_TIC/widgets/listTileWidget.dart';
 import 'package:flutter_class_TIC/widgets/listViewWidget.dart';
 import 'package:flutter_class_TIC/widgets/networkImageWidget.dart';
@@ -70,7 +71,7 @@ class _FlutterClassState extends State<FlutterClass> {
                 Icon(Icons.more_vert),
               ],
             ),
-            body: ListTileWidget()
+            body: TestForm()
 //            SingleChildScrollView(
 //          child: Column(
 //            crossAxisAlignment: CrossAxisAlignment.start,
