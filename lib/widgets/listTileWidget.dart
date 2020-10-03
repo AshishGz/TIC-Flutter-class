@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_TIC/screen/news-screen.dart';
 import 'package:flutter_class_TIC/widgets/bottomNavigationWidget.dart';
 import 'package:flutter_class_TIC/widgets/tabBarWidget.dart';
 
@@ -64,14 +65,23 @@ class ListTileWidget extends StatelessWidget {
                 child: Text('dsa'),
               )),
         ),
-        Card(
-          child: ListTile(
-            leading: FlutterLogo(size: 72.0),
-            title: Text('Three-line ListTile'),
-            subtitle:
-                Text('A sufficiently long subtitle warrants three lines.'),
-            trailing: Icon(Icons.access_alarm),
-            isThreeLine: true,
+        InkWell(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (BuildContext context) {
+                return NewsScreen();
+              },
+            ));
+          },
+          child: Card(
+            child: ListTile(
+              leading: FlutterLogo(size: 72.0),
+              title: Text('Nes Screen'),
+              subtitle:
+                  Text('A sufficiently long subtitle warrants three lines.'),
+              trailing: Icon(Icons.access_alarm),
+              isThreeLine: true,
+            ),
           ),
         ),
       ],

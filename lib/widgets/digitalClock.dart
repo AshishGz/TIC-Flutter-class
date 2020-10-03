@@ -85,3 +85,11 @@ class _DigitalClockState extends State<DigitalClock> {
     );
   }
 }
+//fromVideoList(String jsons) {
+//  var json = jsonDecode(jsons);
+//  List<Video> list = new List<Video>();
+//  json['videos'].forEach((v) {
+//    list.add(new Video.fromJson(v));
+//  });
+//  return list;
+//}
