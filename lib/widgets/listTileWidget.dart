@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_TIC/screen/crickerHome.dart';
 import 'package:flutter_class_TIC/screen/news-screen.dart';
 import 'package:flutter_class_TIC/widgets/bottomNavigationWidget.dart';
 import 'package:flutter_class_TIC/widgets/tabBarWidget.dart';
@@ -56,14 +57,23 @@ class ListTileWidget extends StatelessWidget {
             dense: true,
           ),
         ),
-        Card(
-          child: ListTile(
-              leading: FlutterLogo(size: 56.0),
-              title: Text('Two-line ListTile'),
-              subtitle: Text('Here is a second line'),
-              trailing: RaisedButton(
-                child: Text('dsa'),
-              )),
+        InkWell(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (BuildContext context) {
+                return CricketHome();
+              },
+            ));
+          },
+          child: Card(
+            child: ListTile(
+                leading: FlutterLogo(size: 56.0),
+                title: Text('Cricket API'),
+                subtitle: Text('Here is a second line'),
+                trailing: RaisedButton(
+                  child: Text('dsa'),
+                )),
+          ),
         ),
         InkWell(
           onTap: () {
