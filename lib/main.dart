@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_class_TIC/facebook_clone/facebook_home.dart';
 import 'package:flutter_class_TIC/widgets/IconImageWidget.dart';
 import 'package:flutter_class_TIC/widgets/asscetImagewidget.dart';
 import 'package:flutter_class_TIC/widgets/buttonWidget.dart';
@@ -39,13 +40,15 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.orange,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(color: Colors.white),
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FlutterClass(),
+      home: FacebookHome(),
     );
   }
 }

@@ -23,9 +23,12 @@ class MyTextFormField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           contentPadding: EdgeInsets.all(15.0),
-          border: InputBorder.none,
+          border: new OutlineInputBorder(
+              borderRadius: const BorderRadius.all(
+            const Radius.circular(30.0),
+          )),
           filled: true,
-          fillColor: Colors.grey[200],
+          fillColor: Colors.white,
         ),
         obscureText: isPassword ? true : false,
         validator: validator,
