@@ -3,15 +3,25 @@ import 'package:flutter_class_TIC/facebook_clone/createRoom.dart';
 import 'package:flutter_class_TIC/facebook_clone/fbStory.dart';
 import 'package:flutter_class_TIC/facebook_clone/fb_status.dart';
 import 'package:flutter_class_TIC/facebook_clone/whatsInMind.dart';
+import 'package:flutter_class_TIC/providerExample/view.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          child: WhatsInMind(),
+        InkWell(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (BuildContext context) {
+                return View();
+              },
+            ));
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: WhatsInMind(),
+          ),
         ),
         Container(
           height: 10,
